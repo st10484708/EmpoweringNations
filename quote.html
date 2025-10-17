@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote - Empowering the Nation</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="https://thumbs.dreamstime.com/b/colourful-hand-tree-abstract-image-logo-icon-hands-as-trunk-leaves-37127556.jpg" alt="Logo">
+        <span class="logo-text" id="top">Empowering the Nation</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="sidebar">
+      <a href="index.html">Home</a>
+      
+      <!-- Courses Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-trigger" onclick="toggleDropdown(event)">
+          Courses ▼
+        </button>
+        <div class="dropdown-menu" id="coursesDropdown">
+
+          <!-- 6 Month Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixMonth')" data-submenu="sixMonth">
+              6 Month Courses
+              <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixMonth">
+              <a href="firstAid.html">First Aid</a>
+              <a href="sewing.html">Sewing</a>
+              <a href="gardening.html">Gardening</a>
+              <a href="#">Life Skills</a>
+            </div>
+          </div>
+
+          <!-- 6 Week Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixWeek')"  data-submenu="sixWeek">
+              6 Week Courses
+              <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixWeek">
+              <a href="#">Child Minding</a>
+              <a href="#">Cooking</a>
+              <a href="landscaping.html">Garden Maintenance</a>
+              <a href="#">Customer Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="quote.html" class="active">Quote</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Quote Form Content -->
+  <div class="quote-container">
+    <div class="quote-header">
+      <h1>Get Your Course Quote</h1>
+      <p>Select your courses and provide your details to receive a personalized quote. Discounts available for multiple course selections!</p>
+    </div>
+
+    <div class="quote-form-container">
+      <form id="quoteForm">
+
+        <!-- Personal Information -->
+        <div class="form-section">
+          <h2>Personal Information</h2>
+          <div class="row">
+            <div class="form-group">
+
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          
+          <div class="row">
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Selection -->
+        <div class="form-section">
+          <h2>Select Your Courses</h2>
+          <p style="color: #666; margin-bottom: 20px;">Select one or more courses. Discounts automatically apply!</p>
+          
+          <div class="checkbox-group">
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="firstAid" name="courses" value="1500" data-course="First Aid">
+              <label for="firstAid">
+                <strong>First Aid</strong>
+                <div class="course-details">6 months | R1,500</div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="sewing" name="courses" value="1500" data-course="Sewing">
+              <label for="sewing">
+                <strong>Sewing</strong>
+                <div class="course-details">6 months | R1,500</div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="landscaping" name="courses" value="1500" data-course="Landscaping">
+              <label for="landscaping">
+                <strong>Landscaping</strong>
+                <div class="course-details">6 months | R1,500</div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="lifeskills" name="courses" value="1500" data-course="Life Skills">
+              <label for="lifeskills">
+                <strong>Life Skills</strong>
+                <div class="course-details">6 months | R1,500</div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="childminding" name="courses" value="750" data-course="Child Minding">
+              <label for="childminding">
+                <strong>Child Minding</strong>
+                <div class="course-details">6 weeks | R750</div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="cooking" name="courses" value="750" data-course="Cooking">
+              <label for="cooking">
+                <strong>Cooking</strong>
+                <div class="course-details">6 weeks | R750</div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input type="checkbox" id="gardening" name="courses" value="750" data-course="Garden Maintenance">
+              <label for="gardening">
+                <strong>Garden Maintenance</strong>
+                <div class="course-details">6 weeks | R750</div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Submit Button -->
+        <div class="submit-section">
+          <button type="submit" class="submit-btn">Request Quote</button>
+        </div>
+
+        <!-- Price Summary -->
+        <div class="price-summary">
+          <h3>Price Summary</h3>
+          <div class="price-line">
+            <span>Subtotal:</span>
+            <span id="subtotal">R0</span>
+          </div>
+          <div class="price-line">
+            <span>Discount:</span>
+            <span id="discount">R0</span>
+          </div>
+          <div class="price-line total">
+            <span>Total:</span>
+            <span id="total">R0</span>
+          </div>
+
+          <div class="discount-info">
+            <strong>💰 Discount Information:</strong><br>
+            • 5% off for 2-3 courses<br>
+            • 10% off for 4-5 courses<br>
+            • 15% off for 6+ courses
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">↑</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Footer</h2>
+    <p>&copy; Empowering the Nation | 2025</p>
+  </footer>
+
+    <script>
+
+   // Main dropdown - opens on hover
+const coursesTrigger = document.querySelector('.dropdown-trigger');
+const coursesDropdown = document.getElementById('coursesDropdown');
+
+if (coursesTrigger) {
+  coursesTrigger.addEventListener('mouseenter', function() {
+    coursesDropdown.classList.add('show');
+  });
+
+  coursesTrigger.addEventListener('mouseleave', function() {
+    coursesDropdown.classList.remove('show');
+  });
+}
+
+if (coursesDropdown) {
+  coursesDropdown.addEventListener('mouseenter', function() {
+    this.classList.add('show');
+  });
+
+  coursesDropdown.addEventListener('mouseleave', function() {
+    this.classList.remove('show');
+  });
+}
+
+// Submenu items - click to toggle, but close other submenus
+const submenuTriggers = document.querySelectorAll('.dropdown-submenu > a');
+
+submenuTriggers.forEach(trigger => {
+  trigger.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    const submenuId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+    const submenu = document.getElementById(submenuId);
+    const isOpen = submenu.classList.contains('show');
+
+    // Close all submenus
+    document.querySelectorAll('.submenu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+
+    // Toggle the clicked submenu
+    if (!isOpen) {
+      submenu.classList.add('show');
+    }
+  });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+  const dropdown = document.querySelector('.dropdown');
+  
+  if (!dropdown.contains(event.target)) {
+    coursesDropdown.classList.remove('show');
+    document.querySelectorAll('.submenu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+  }
+});
+  </script>
+</body>
+</html>

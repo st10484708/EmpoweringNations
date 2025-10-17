@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empowering the Nation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="https://thumbs.dreamstime.com/b/colourful-hand-tree-abstract-image-logo-icon-hands-as-trunk-leaves-37127556.jpg" alt="Logo">
+        <span class="logo-text" id="top">Empowering the Nation</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="sidebar">
+      <a href="index.html" class="active">Home</a>
+      
+      <!-- Courses Dropdown -->
+      <div class="dropdown">
+          <a href="courses.html" class="dropdown-trigger">Courses ▼</a>
+        <div class="dropdown-menu" id="coursesDropdown">
+
+          <!-- 6 Month Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixMonth')" data-submenu="sixMonth">
+              6 Month Courses
+              <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixMonth">
+              <a href="firstAid.html">First Aid</a>
+              <a href="sewing.html">Sewing</a>
+              <a href="gardening.html">Gardening</a>
+              <a href="#">Life Skills</a>
+            </div>
+          </div>
+
+          <!-- 6 Week Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixWeek')"  data-submenu="sixWeek">
+              6 Week Courses
+              <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixWeek">
+              <a href="#">Child Minding</a>
+              <a href="#">Cooking</a>
+              <a href="landscaping.html">Garden Maintenance</a>
+              <a href="#">Customer Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="quote.html">Quote</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=500&h=300&fit=crop" alt="People learning together" class="hero-image">
+    </div>
+
+    <!-- Mission & Vision -->
+    <div class="mission-vision">
+      <div class="mission">
+        <h2>Mission</h2>
+        <p>At Empowering the Nation, our mission is to provide accessible training in domestic, vocational, and technical skills that boost employability, workplace performance, and entrepreneurship. We equip individuals with practical expertise and confidence to succeed, while driving independence and community growth.</p>
+      </div>
+
+      <div class="vision">
+        <h2>Vision</h2>
+        <p>Our vision is to build a skilled and self-reliant society where every individual has the opportunity to learn, earn, and uplift others. Through professional development, we aim to be South Africa's leading skills development organisation, empowering people to transform their futures.</p>
+      </div>
+    </div>
+
+    <!-- Courses Section -->
+    <div class="courses-section">
+      <h2 class="courses-title">Featured Courses</h2>
+      <div class="courses-grid">
+        <a href="gardening.html" class="course-card">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&h=200&fit=crop" alt="Gardening">
+          <h3>Gardening</h3>
+        </a>
+
+        <a href="firstAid.html" class="course-card">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=200&fit=crop" alt="First Aid">
+          <h3>First Aid</h3>
+        </a>
+
+        <a href="sewing.html" class="course-card">
+          <img src="https://missyrose.com.au/cdn/shop/articles/shutterstock_1028326795_1445x.jpg?v=1694902845" alt="Sewing">
+          <h3>Sewing</h3>
+        </a>
+
+        <a href="landscaping.html" class="course-card">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=300&h=200&fit=crop" alt="Landscaping">
+          <h3>Landscaping</h3>
+        </a>
+      </div>
+      
+      <!-- Learn More Button -->
+      <div class="learn-more-container">
+        <a href="#" class="learn-more-btn">Learn More</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">↑</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Footer</h2>
+    <p>&copy; Empowering the Nation | 2025</p>
+  </footer>
+
+  <script>
+
+   // Main dropdown - opens on hover
+const coursesTrigger = document.querySelector('.dropdown-trigger');
+const coursesDropdown = document.getElementById('coursesDropdown');
+
+if (coursesTrigger) {
+  coursesTrigger.addEventListener('mouseenter', function() {
+    coursesDropdown.classList.add('show');
+  });
+
+  coursesTrigger.addEventListener('mouseleave', function() {
+    coursesDropdown.classList.remove('show');
+  });
+}
+
+if (coursesDropdown) {
+  coursesDropdown.addEventListener('mouseenter', function() {
+    this.classList.add('show');
+  });
+
+  coursesDropdown.addEventListener('mouseleave', function() {
+    this.classList.remove('show');
+  });
+}
+
+// Submenu items - click to toggle, but close other submenus
+const submenuTriggers = document.querySelectorAll('.dropdown-submenu > a');
+
+submenuTriggers.forEach(trigger => {
+  trigger.addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    const submenuId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+    const submenu = document.getElementById(submenuId);
+    const isOpen = submenu.classList.contains('show');
+
+    // Close all submenus
+    document.querySelectorAll('.submenu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+
+    // Toggle the clicked submenu
+    if (!isOpen) {
+      submenu.classList.add('show');
+    }
+  });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+  const dropdown = document.querySelector('.dropdown');
+  
+  if (!dropdown.contains(event.target)) {
+    coursesDropdown.classList.remove('show');
+    document.querySelectorAll('.submenu').forEach(menu => {
+      menu.classList.remove('show');
+    });
+  }
+});
+  </script>
+</body>
+</body>
+</html>
