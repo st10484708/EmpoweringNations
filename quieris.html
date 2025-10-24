@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - Empowering the Nation</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f7f8;
+      color: #333;
+    }
+
+    /* Header */
+    .header {
+      background-color: #f5f1e8;
+      padding: 20px 0;
+      border-bottom: 2px solid #e0d5c7;
+    }
+    .header .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+    .header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    .header .logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    /*Navigation bar*/
+   .nav-container {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .sidebar a {
+      color: rgb(0, 0, 0);
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    
+    sidebar a.active {
+      background-color: #ffc107;
+      color: #000;
+      font-weight: bold;
+    }
+
+    /* Main */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .hero-section h1 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 10px;
+    }
+    .hero-section p {
+      text-align: center;
+      color: #040404;
+      margin-bottom: 30px;
+    }
+
+    /* Form */
+    .feedback-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .feedback-form label {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .feedback-form input,
+    .feedback-form select,
+    .feedback-form textarea {
+      margin-bottom: 20px;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .feedback-form textarea {
+      resize: vertical;
+    }
+
+    /* Rating */
+    .rating {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .rating input[type="radio"] {
+      display: none;
+    }
+    .rating label {
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background: #ecf0f1;
+      transition: background 0.3s, color 0.3s;
+    }
+    .rating input[type="radio"]:checked + label {
+      background-color: #1abc9c;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      background-color: #1abc9c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .submit-btn:hover {
+      background-color: #0353f4;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #f8f9fa;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .back-to-top:hover {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+ <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="https://thumbs.dreamstime.com/b/colourful-hand-tree-abstract-image-logo-icon-hands-as-trunk-leaves-37127556.jpg" alt="Logo">
+        <span class="logo-text" id="top">Empowering the Nation</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="sidebar">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="quote.html">Quote</a>
+      <a href="contact.html">Contact</a>
+      <a href="quieris.html" class="active">Customer Service</a>
+      
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <div class="hero-section">
+      <h1>We Value Your Feedback</h1>
+      <p>Your input helps us improve our courses and services. Please fill out the form below.</p>
+    </div>
+
+    <form action="#" method="post" class="feedback-form">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <label for="course">Course Feedback For:</label>
+      <select id="course" name="course" required>
+        <option value="">Select a course</option>
+        <option value="lifeskills">Life Skills</option>
+        <option value="gardening">Gardening</option>
+        <option value="firstAid">First Aid</option>
+        <option value="sewing">Sewing</option>
+        <option value="landscaping">Landscaping</option>
+      </select>
+
+      <label>Overall Experience:</label>
+      <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5">
+        <label for="star5">5 Stars</label>
+        <input type="radio" id="star4" name="rating" value="4">
+        <label for="star4">4 Stars</label>
+        <input type="radio" id="star3" name="rating" value="3">
+        <label for="star3">3 Stars</label>
+        <input type="radio" id="star2" name="rating" value="2">
+        <label for="star2">2 Stars</label>
+        <input type="radio" id="star1" name="rating" value="1">
+        <label for="star1">1 Star</label>
+      </div>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="Your thoughts..." required></textarea>
+
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </main>
+
+  <!-- Back to Top Button -->
+  <a href="#top" class="back-to-top">↑</a>
+
+  <!-- Footer -->
+   <footer class="footer">
+      <h2>Empowering the Nation</h2>
+
+      <div class="footer-grid">
+        <div>
+          <p>Empowering communities through practical education and skill-based training to build a stronger South Africa.</p>
+          <div class="social-links">
+            <a href="#" title="Facebook">🌐</a>
+            <a href="#" title="Instagram">📸</a>
+            <a href="#" title="LinkedIn">💼</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Gauteng Office</h3>
+          <p><strong>Email:</strong> <a href="mailto:here2help@nation.za">here2help@nation.za</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+27127892818">+27 12 789 2818</a></p>
+          <p><strong>Address:</strong> The A/K, Sandton, 2023</p>
+        </div>
+
+        <div>
+          <h3>Western Cape Office</h3>
+          <p><strong>Email:</strong> <a href="mailto:here2helpct@nation.za">here2helpct@nation.za</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+27200983958">+27 20 098 3958</a></p>
+          <p><strong>Address:</strong> Frank Square, Sonnenberg, 2020</p>
+        </div>
+      </div>
+
+      <small>&copy; 2025 Empowering the Nation | All Rights Reserved.</small>
+    </footer>
+</body>
+</html>
