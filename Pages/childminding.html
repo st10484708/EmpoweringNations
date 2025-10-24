@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Child Minding - Empowering The Nation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="https://thumbs.dreamstime.com/b/colourful-hand-tree-abstract-image-logo-icon-hands-as-trunk-leaves-37127556.jpg" alt="Logo">
+        <span class="logo-text" id="top">Empowering the Nation</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="sidebar">
+      <a href="index.html" class="active">Home</a>
+
+      <!-- Courses Dropdown -->
+      <div class="dropdown">
+        <a href="courses.html" class="dropdown-trigger">Courses ▼</a>
+        <div class="dropdown-menu" id="coursesDropdown">
+          
+          <!-- 6 Month Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixMonth')" data-submenu="sixMonth">
+              6 Month Courses <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixMonth">
+              <a href="firstAid.html">First Aid</a>
+              <a href="sewing.html">Sewing</a>
+              <a href="landscaping.html">Landscaping</a>
+              <a href="lifeskills.html">Life Skills</a>
+            </div>
+          </div>
+
+          <!-- 6 Week Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixWeek')" data-submenu="sixWeek">
+              6 Week Courses <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixWeek">
+              <a href="childminding.html">Child Minding</a>
+              <a href="cooking.html">Cooking</a>
+              <a href="gardening.html">Garden Maintenance</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="quote.html">Quote</a>
+      <a href="contact.html">Contact</a>
+      <a href="quieris.html">Customer Service</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Introduction to Child Minding</h2>
+
+    <div class="ggardening-layout">
+      
+      <!-- Introduction Card -->
+      <div class="gardening-card">
+        <img src="../Images/childminding.jpg" alt="Child Minding">
+        <p>This course provides learners with the skills to care for young children safely and effectively. Students will learn how to support children’s physical, emotional, and cognitive development, promote good hygiene and nutrition, and create nurturing environments that encourage play and learning.</p>
+      </div>
+
+      <!-- Syllabus Card -->
+      <div class="gardening-card syllabus">
+        <h3>Syllabus</h3>
+        <p>
+          <strong>Week 1:</strong> Introduction to Child Development and Care<br>
+          <strong>Week 2:</strong> Health, Safety, and Hygiene Practices<br>
+          <strong>Week 3:</strong> Nutrition and Meal Planning for Children<br>
+          <strong>Week 4:</strong> Creating a Stimulating Environment<br>
+          <strong>Week 5:</strong> Communication and Interaction with Children<br>
+          <strong>Week 6:</strong> First Aid Basics for Childcare
+        </p>
+      </div>
+
+      <!-- Outcomes Card -->
+      <div class="gardening-card outcomes">
+        <h3>Outcomes</h3>
+        <p>
+          By the end of this course, participants will be able to:<br>
+          - Understand the stages of child development and appropriate care techniques.<br>
+          - Implement health and safety practices in childcare settings.<br>
+          - Plan and prepare nutritious meals for young children.<br>
+          - Create engaging and educational environments for children.<br>
+          - Communicate effectively with children and their families.<br>
+          - Apply basic first aid skills in childcare situations.
+        </p>
+      </div>
+
+      <!-- Enroll Button -->
+      <div class="enroll-btn">
+        <a href="quote.html" class="enroll">Enroll</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back to Top -->
+  <a href="#top" class="back-to-top" id="backToTop">↑</a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h2>Empowering the Nation</h2>
+
+    <div class="footer-grid">
+      <div>
+        <p>Empowering communities through practical education and skill-based training to build a stronger South Africa.</p>
+        <div class="social-links">
+          <a href="#" title="Facebook">🌐</a>
+          <a href="#" title="Instagram">📸</a>
+          <a href="#" title="LinkedIn">💼</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Gauteng Office</h3>
+        <p><strong>Email:</strong> <a href="mailto:here2help@nation.za">here2help@nation.za</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+27127892818">+27 12 789 2818</a></p>
+        <p><strong>Address:</strong> The A/K, Sandton, 2023</p>
+      </div>
+
+      <div>
+        <h3>Western Cape Office</h3>
+        <p><strong>Email:</strong> <a href="mailto:here2helpct@nation.za">here2helpct@nation.za</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+27200983958">+27 20 098 3958</a></p>
+        <p><strong>Address:</strong> Frank Square, Sonnenberg, 2020</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Optional: Back to top button visibility
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+
+    // Optional: Submenu toggle for mobile
+    function toggleSubmenu(event, id) {
+      event.preventDefault();
+      document.getElementById(id).classList.toggle("open");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Empowering The Nation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="logo-container">
+        <img src="https://thumbs.dreamstime.com/b/colourful-hand-tree-abstract-image-logo-icon-hands-as-trunk-leaves-37127556.jpg" alt="Logo">
+        <span class="logo-text" id="top">Empowering the Nation</span>
+      </a>
+    </div>
+  </header>
+
+    <!-- Navigation -->
+  <nav class="nav-container">
+    <div class="sidebar">
+      <a href="index.html" class="active">Home</a>
+      
+      
+      <!-- Courses Dropdown -->
+      <div class="dropdown">
+          <a href="courses.html" class="dropdown-trigger">Courses ▼</a>
+        <div class="dropdown-menu" id="coursesDropdown">
+
+          <!-- 6 Month Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixMonth')" data-submenu="sixMonth">
+              6 Month Courses
+              <span class="submenu-arrow">▶</span>
+            </a>
+            <div class="submenu" id="sixMonth">
+              <a href="firstAid.html">First Aid</a>
+              <a href="sewing.html">Sewing</a>
+              <a href="landscaping.html">Landscaping</a>
+              <a href="lifeskills.html">Life Skills</a>
+            </div>
+          </div>
+
+          <!-- 6 Week Courses -->
+          <div class="dropdown-submenu">
+            <a href="#" onclick="toggleSubmenu(event, 'sixWeek')"  data-submenu="sixWeek">
+              6 Week Courses
+              <span class="submenu-arrow">▶</span>
+            </a>
+           <div class="submenu" id="sixWeek">
+              <a href="childminding.html">Child Minding</a>
+              <a href="cooking.html">Cooking</a>
+              <a href="gardening.html">Garden Maintenance</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="quote.html">Quote</a>
+      <a href="contact.html">Contact</a>
+      <a href="quieris.html">Customer Service</a>
+    </div>
+  </nav>
+
+
+       <!-- Main Content -->
+        <main>
+            <h2>Introduction to Gardening</h2>
+
+            <div class="gardening-layout">
+                <div class="gardening-card">
+                    <img src="../Images/gardening.jpg" alt="Gardening">
+                    <p>A quick-start course on planting, watering, pruning, and pest control
+          for small gardens and household yards.</p>
+                </div>
+
+                <div class="gardening-card syllabus">
+                    <h3>Syllabus</h3>
+                    <p><strong>Week 1:</strong> Foundations of Gardening — Tools, soil types, and preparation<br>
+                    <strong>Week 2:</strong> Planting Basics — Seeds, seedlings, and watering<br>
+                    <strong>Week 3:</strong> Soil & Fertilizer Management</p>
+                </div>
+
+                <div class="gardening-card outcomes">
+                    <h3>Outcomes</h3>
+                    <p>
+                        By the end of this course, participants will be able to:<br>
+                        - Prepare soil and plant a variety of flowers and vegetables.<br>
+                        - Implement basic watering and fertilization techniques.<br>
+                        - Identify and use essential gardening tools.<br>
+                    </p>
+                </div>
+
+                <div class="enroll-btn">
+                    <a href="#" class="enroll">Enroll</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+        <!-- Back to Top Button -->
+        <a href="#top" class="back-to-top" id="backToTop">↑</a>
+
+     <footer class="footer">
+      <h2>Empowering the Nation</h2>
+
+      <div class="footer-grid">
+        <div>
+          <p>Empowering communities through practical education and skill-based training to build a stronger South Africa.</p>
+          <div class="social-links">
+            <a href="#" title="Facebook">🌐</a>
+            <a href="#" title="Instagram">📸</a>
+            <a href="#" title="LinkedIn">💼</a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Gauteng Office</h3>
+          <p><strong>Email:</strong> <a href="mailto:here2help@nation.za">here2help@nation.za</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+27127892818">+27 12 789 2818</a></p>
+          <p><strong>Address:</strong> The A/K, Sandton, 2023</p>
+        </div>
+
+        <div>
+          <h3>Western Cape Office</h3>
+          <p><strong>Email:</strong> <a href="mailto:here2helpct@nation.za">here2helpct@nation.za</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+27200983958">+27 20 098 3958</a></p>
+          <p><strong>Address:</strong> Frank Square, Sonnenberg, 2020</p>
+        </div>
+      </div>
+</body>
+</html>
