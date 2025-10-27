@@ -66,7 +66,7 @@ The design of the **Empowering the Nation website** was based on the following k
 ## Contributors and Roles
 **Marie-Grace Noumbissie** -Developed all 6-Week Short Courses (Gardening Basics, Cooking, Child Minding). Structured all HTML and CSS layouts, ensured consistent styling, and built the responsive contact page.
 **Joshua Mpungu** -Developed 2 Long Course Pages and Home Page. Assisted with overall design alignment
-**Aminha Taku Mugeri** - Developed the remaining 2 Long Courses, and proofread all text content for consistency.
+**Aminha Taku Mugeri** - Developed the remaining 2 Long Courses as well as created the feedback page and Stuctured all CSS for the rquired pages without , and proofread all text content for consistency.
 
 ## Challenges Encountered
 1. **Challenge**- Aligning sidebar navigation and content responsiveness
